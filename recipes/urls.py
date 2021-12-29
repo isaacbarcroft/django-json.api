@@ -10,4 +10,6 @@ router.register(r'recipes', views.RestaurantViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('<name>/', views.RecipeListAPIView.as_view(),name='recipe_list'),
+
 ]
